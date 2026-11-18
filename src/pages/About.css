@@ -1,0 +1,179 @@
+
+.about-page {
+  width: 100%;
+  background: #ffffff;
+  color: #263b50;
+}
+
+/* ABOUT HERO */
+.about-hero {
+  min-height: 350px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(15, 42, 65, 0.95), rgba(15, 42, 65, 0.65)),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=85");
+  background-position: center;
+  background-size: cover;
+}
+
+.about-hero-content {
+  max-width: 700px;
+  color: #ffffff;
+}
+
+.about-hero-content span {
+  color: #e4c58e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.about-hero-content h1 {
+  margin: 18px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 60px);
+}
+
+.about-hero-content p {
+  color: #e3eaf0;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* MAIN ABOUT */
+.about-main {
+  padding: 95px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-main-image img {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-main-content h2 {
+  margin: 18px 0;
+  color: #173653;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 3.5vw, 42px);
+  line-height: 1.3;
+}
+
+.about-main-content p {
+  color: #718092;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* MISSION CARDS */
+.about-mission {
+  padding: 75px 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  background: #f7f5ef;
+}
+
+.mission-card {
+  padding: 35px 28px;
+  background: #ffffff;
+  border: 1px solid #e9e6df;
+  border-radius: 8px;
+  transition: 0.25s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(23, 54, 83, 0.08);
+}
+
+.mission-card span {
+  color: #b18a4a;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.mission-card h2 {
+  margin: 15px 0;
+  color: #173653;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+}
+
+.mission-card p {
+  color: #718092;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* QUOTE */
+.about-quote {
+  padding: 75px 8%;
+  background: #173653;
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-quote h2 {
+  margin: 0 0 15px;
+  color: #e4c58e;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.about-quote p {
+  color: #e3eaf0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* LOCATION */
+.about-location {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.about-location h2 {
+  margin: 15px 0;
+  color: #173653;
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+}
+
+.about-location p {
+  color: #718092;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-main {
+    padding: 60px 6%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-main-image img {
+    height: 280px;
+  }
+
+  .about-mission {
+    padding: 55px 6%;
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    min-height: 300px;
+    padding: 55px 6%;
+  }
+}

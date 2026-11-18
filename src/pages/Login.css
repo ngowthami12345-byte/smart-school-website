@@ -1,0 +1,423 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* =================================
+   MAIN LOGIN LAYOUT
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #eef1f5;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* =================================
+   LEFT IMAGE SECTION
+================================= */
+
+.login-image {
+  min-height: 100vh;
+  position: relative;
+  background:
+    linear-gradient(
+      rgba(15, 35, 60, 0.48),
+      rgba(15, 35, 60, 0.48)
+    ),
+    url("/images/school-playground.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-image-overlay {
+  min-height: 100vh;
+  padding: 55px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  background: transparent;
+}
+
+/* =================================
+   SCHOOL BRAND
+================================= */
+
+.login-brand {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  column-gap: 14px;
+  align-items: center;
+}
+
+.login-logo {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: span 2;
+
+  border: 1px solid #e5bd70;
+  color: #f2ca7b;
+
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.login-brand h2 {
+  margin: 0;
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.login-brand p {
+  margin: 5px 0 0;
+  color: #f2ca7b;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* =================================
+   WELCOME TEXT
+================================= */
+
+.login-image-text {
+  max-width: 500px;
+  margin-bottom: 65px;
+}
+
+.login-image-text h1 {
+  margin: 0 0 15px;
+
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 800;
+  line-height: 1.2;
+
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.login-image-text h2 {
+  margin: 0 0 12px;
+
+  color: #f2ca7b;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.login-image-text p {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8;
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* =================================
+   RIGHT FORM SECTION
+================================= */
+
+.login-form-section {
+  min-height: 100vh;
+  padding: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef1f5;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 42px 35px;
+
+  background: #ffffff;
+  border: 1px solid #e3e7ed;
+  border-radius: 12px;
+
+  box-shadow: 0 12px 35px rgba(23, 54, 83, 0.09);
+}
+
+/* =================================
+   BACK TO HOME
+================================= */
+
+.back-home {
+  display: block;
+  width: fit-content;
+
+  margin-bottom: 55px;
+  padding-bottom: 10px;
+
+  color: #718092;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.back-home:hover {
+  color: #b18a4a;
+}
+
+/* =================================
+   ADMINISTRATION HEADING
+================================= */
+
+.login-label {
+  display: block;
+
+  color: #b18a4a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.login-card h1 {
+  margin: 14px 0 10px;
+
+  color: #173653;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+}
+
+.login-description {
+  margin-bottom: 35px;
+
+  color: #718092;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =================================
+   INPUT FIELDS
+================================= */
+
+.login-input-group {
+  margin-bottom: 22px;
+}
+
+.login-input-group label {
+  display: block;
+  margin-bottom: 9px;
+
+  color: #263b50;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.login-input-group input {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 15px;
+
+  border: 1px solid #dce2e8;
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #f8f9fb;
+  color: #263b50;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+
+  transition: 0.2s ease;
+}
+
+.login-input-group input:focus {
+  border-color: #b18a4a;
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(177, 138, 74, 0.1);
+}
+
+/* =================================
+   ERROR MESSAGE
+================================= */
+
+.login-error {
+  margin: 12px 0;
+  padding: 12px;
+
+  border-radius: 5px;
+  background: #fff0f0;
+
+  color: #c0392b;
+  font-size: 13px;
+}
+
+/* =================================
+   LOGIN BUTTON
+================================= */
+
+.login-submit {
+  width: 100%;
+  min-height: 53px;
+
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #173653;
+  color: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.login-submit:hover {
+  background: #b18a4a;
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(177, 138, 74, 0.2);
+}
+
+.login-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+.login-footer {
+  margin-top: 38px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e7eaf0;
+
+  color: #8995a2;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+  .login-form-section {
+    padding: 30px;
+  }
+
+  .login-card {
+    padding: 35px 25px;
+  }
+
+  .login-image-overlay {
+    padding: 40px 7%;
+  }
+
+  .login-image-text h1 {
+    font-size: 40px;
+  }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 750px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .login-image {
+    min-height: 320px;
+  }
+
+  .login-image-overlay {
+    min-height: 320px;
+    padding: 28px 7%;
+  }
+
+  .login-logo {
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .login-brand {
+    grid-template-columns: 48px 1fr;
+  }
+
+  .login-brand h2 {
+    font-size: 16px;
+  }
+
+  .login-brand p {
+    font-size: 9px;
+  }
+
+  .login-image-text {
+    margin: 35px 0 0;
+  }
+
+  .login-image-text h1 {
+    font-size: 32px;
+  }
+
+  .login-image-text h2 {
+    font-size: 20px;
+  }
+
+  .login-image-text p {
+    font-size: 13px;
+  }
+
+  .login-form-section {
+    min-height: auto;
+    padding: 35px 7%;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+  }
+
+  .back-home {
+    margin-bottom: 35px;
+  }
+
+  .login-card h1 {
+    font-size: 35px;
+  }
+
+  .login-footer {
+    margin-top: 30px;
+  }
+}
+
+
+
+

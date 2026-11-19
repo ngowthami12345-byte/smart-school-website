@@ -1,5 +1,4 @@
 
-
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
@@ -19,8 +18,14 @@ function Login() {
     setLoading(true);
 
     try {
+      const API_URL = import.meta.env.VITE_API_URL;
+
+      if (!API_URL) {
+        throw new Error("Backend URL is not configured.");
+      }
+
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${API_URL}/api/auth/login`,
         {
           email: email.trim().toLowerCase(),
           password,
@@ -36,9 +41,11 @@ function Login() {
 
       localStorage.setItem("token", token);
       navigate("/admin");
+
     } catch (err) {
       setError(
         err.response?.data?.message ||
+        err.message ||
         "Unable to login. Please check your details and server."
       );
     } finally {
@@ -140,3 +147,5 @@ function Login() {
 }
 
 export default Login;
+
+
